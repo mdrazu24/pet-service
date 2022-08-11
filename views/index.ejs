@@ -1,0 +1,52 @@
+<%- include("partials/header.ejs") %>
+
+   <main>
+      <div class="right">
+        <figure>
+               <img src="img/mainpet.jpg" alt="Pets">
+        </figure>
+</div>
+            <div class="right">               
+                <h2>Welcome to PetsPro</h2>
+              <p> 
+
+                <br>
+                <div class="top">
+
+
+<% if(!isLoggedIn){ %>
+<p class="pi"> Customer Login</p>
+      <p>  
+       <form action="/login">
+  <button type="submit" id="login"> Login </button>
+    </form>
+  <br>
+     </p>
+      </div>
+
+<br>
+
+   <div class="middle">                
+    <p class="pi"> New Customer Sign Up:</p> 
+      <form action="/member/new"> 
+    <button type="submit" id="sign"> Sign Up! </button>
+  </form>
+          <br>        
+        </div>
+<br> 
+        <div class="bottom">                
+    <p class="pi"> Authorized User's Only:</p> 
+          <p> This website is for PetsPro's customer only.</p>
+
+               
+        </div>
+              
+ </div>
+     </main>
+                
+<br>
+<% } else { %>
+<p></p>
+<% } %>
+
+   <%- include("partials/footer.ejs") %>

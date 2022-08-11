@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") %>
+  
+<body>
+<h4> Sign Up Form </h4>
+  <br>
+  <form method = "POST" action="/registration/complete">
+
+    <table  bgcolor= "#e5fcff" width="670" cellpadding="10">
+          <tr>
+        <td> <br></td>
+      </tr>
+      <tr>
+        <td align="right"> Pet Name:</td>
+        <td> <input type="text" name="pName"> </td>
+      </tr>
+
+        <tr>
+         <td align="right"> Pet Age:</td>
+        <td> <input type="int" name="pAge"> </td>
+      </tr>
+
+             
+
+          <tr>
+         <td align="right"> Pet Breed:</td>
+        <td>  <input type="text" name="breed"> </td>
+         </tr>
+
+               <tr>
+         <td align="right"> Owner's Name:</td> 
+        <td>  
+          <input type="text" id= "fName"  name="fName" value = "<%=first%>"> 
+        </td>
+         </tr>
+
+<!-- PRE FILL OWNERS NAME FROM PREVOUS FIRST NAME -->                
+      <tr>
+        <td> <br></td>
+      </tr>
+      
+    </table>
+     <br><br>
+   
+
+   
+         <input type="submit" value="Sign up!"></form>
+
+     
+          <br>        
+        </div>
+
+
+  <br>
+   <%- include("partials/footer.ejs") %>
+</body>
+</html>

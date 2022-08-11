@@ -1,0 +1,63 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <h3 class="text-center text-md mt-4 text-white">
+    Which pet services do you want for your pet? 
+  </h3>
+
+  <div class="container mt-5 w-50">
+  <form  method="POST" class="row g-3  align-items-center justify-content-center text-white ">
+      <div class="">
+    <label for="service" class="form-label">Service</label>
+    <select id="service"  name="service" class="form-select">
+      <option value="Teeth Cleaning" selected>Teeth Cleaning</option>
+      <option  value="Simple Bath">Simple Bath</option>
+            <option value="Hair Cut">Hair Cut</option>
+                  <option value="Flea Bath">Flea Bath</option>
+
+
+    </select>
+  </div>
+
+
+      
+    
+  <div class="">
+    <label for="appointmentAt" class="form-label">Appointment Date </label>
+    <input type="date" class="form-control" name="appointmentAt" id="appointmentAt">
+  </div>
+
+      <div class="">
+    <label for="appointmentTime" class="form-label">Appointment Time </label>
+    <input type="time" class="form-control" name="appointmentTime" id="appointmentTime">
+  </div>
+
+        <div class="">
+    <label for="petName" class="form-label">Pet Name </label>
+    <input placeholder="Pet name here..." type="text" class="form-control" name="petName" id="petName">
+  </div>
+
+
+    <div class="">
+    <label for="petBreed" class="form-label">Pet Breed</label>
+    <select id="petBreed"  name="petBreed" class="form-select">
+      <option value="Breed Special" selected>Breed Special</option>
+      <option  value="Breed 1">Breed 1</option>
+            <option value="Breed 2">Breed 2</option>
+                  <option value="Breed 3">Breed 3</option>
+
+
+    </select>
+  </div>
+    
+
+  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Reserve</button>
+  </div>
+</form>
+  </div>
+
+  <br>
+   <%- include("partials/footer.ejs") %>
+</body>
+</html>

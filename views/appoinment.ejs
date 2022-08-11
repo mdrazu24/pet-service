@@ -1,0 +1,48 @@
+<%- include("partials/header.ejs") %>
+<body>
+
+  <div class="container-fluid h-full d-flex align-items-center justify-content-center pt-5 mt-5 ">
+
+    <form action="/services" method="GET">
+    <button type="submit" class="btn btn-lg btn-primary">Make a Reservation</button>
+      </form>
+  </div>
+
+    <div class="container d-flex flex flex-wrap  align-items-center justify-content-center gap-4 p-5">
+
+   <% if (typeof services != "undefined" && services.length > 0) { %>
+
+   <% services.forEach((service)=> { %>
+    <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Service - <%= service.service %>
+                        </h5>
+                        <p class="card-text">Appointment At - <%= new Date(service.appointmentAt).toDateString()%>
+                        </p>
+                        <p class="card-text">Appointment Time - <%= service.appointmentTime %>
+                        </p>
+                        <h4 class="card-title">Pet Name - <%= service.petName %>
+                        </h4>
+                        <h4 class="card-title">Pet Breed - <%= service.petBreed %>
+                        </h4>
+        
+                        <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="#" class="btn btn-sm danger">Delete</a>
+                    </div>
+                </div>
+<% }) %>
+           
+    
+
+    <% }%>
+         
+  
+      
+
+  </div>
+
+  
+
+   <%- include("partials/footer.ejs") %>
+</body>
+</html>

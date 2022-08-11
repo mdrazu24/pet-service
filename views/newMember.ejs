@@ -1,0 +1,86 @@
+  <%- include("partials/header.ejs") %>
+<body> 
+   <main>
+      <div class="right">
+        <figure>
+          <img src="/img/dog-signup.jpg"/>          
+        </figure>
+</div>
+
+
+<br>
+
+   <div class="middle">                
+    <p class="pi"> New Customer Sign Up Form:</p> 
+     
+
+
+<h4> Sign Up Form </h4>
+  <br>
+  <form method="POST" action="/signup/new">
+
+    <table bgcolor= "#e5fcff" width="670" cellpadding="10">
+          <tr>
+        <td> <br></td>
+      </tr>
+      <tr>
+        <td align="right"> First Name:</td>
+        <td> <input type="text" name="fName" id="fName" > </td>
+      </tr>
+
+        <tr>
+         <td align="right"> Last Name:</td>
+        <td> <input type="text" name="lName"> </td>
+      </tr>
+      
+      <td align="right"> Email:</td>
+        <td> <input type="text" name="email"> </td>
+      </tr>
+
+      <td align="right"> Phone Number:</td>
+        <td> <input type="text" name="phone"> </td>
+      </tr>
+
+             <tr>
+     <td align="right"> Zip Code:</td>
+        <td> <input type="text" name="zip"> </td>
+      </tr>
+
+          <tr>
+         <td align="right"> Desired Username:</td>
+        <td>  <input type="text" name="username"> </td>
+         </tr>
+
+               <tr>
+         <td align="right"> Password:</td>
+        <td>  <input type="password" name="password"> </td>
+         </tr>
+
+                     <tr>
+         <td align="right"> Re-Type Password:</td>
+        <td>  <input type="password" name="retype"> </td>
+         </tr>
+         <div id="formFeedback"> </div>
+      <tr>
+        <td> <br></td>
+      </tr>
+      
+    </table>
+     <br><br>
+         <input type="submit" id="submit" value="Continue Sign up!">
+  </form>
+
+     
+          <br>        
+        </div>
+<br> 
+    
+              
+ </div>
+     </main>
+
+
+<br>
+
+</body>
+   <%- include("partials/footer.ejs") %>

@@ -1,0 +1,57 @@
+  <%- include("partials/header.ejs") %>
+  
+
+   <main>
+      <div class="right">
+        <figure>
+          <img src="/img/dog-signup.jpg"/>          
+        </figure>
+</div>
+
+
+<br>
+
+   <div class="middle">                
+    <p class="pi"> Existing Customer Login:</p> 
+     
+
+
+<h4> Login </h4>
+  <br>
+  <form method="POST">
+         <td align="center"> Username:</td> <br>
+        <td>  <input type="text" name="username"> </td>
+         </tr>
+          <br>
+               <tr>
+         <td align="center"> Password:</td> <br>
+        <td>  <input type="password" name= "password"> </td>
+         </tr>
+      <tr>
+        <td> <br></td>
+      </tr>
+      
+    </table>
+     <br><br>
+   
+
+   
+         <input type="submit" value="Login">
+
+  </form>
+     
+  <% if (typeof loginError != "undefined" && loginError) { %>
+    <h3 class="alert alert-danger" role="alert">Wrong credentials!</h3>
+    <% }%>
+
+     
+          <br>        
+        </div>
+<br> 
+    
+              
+ </div>
+     </main>
+                
+<br>
+   <%- include("partials/footer.ejs") %>
